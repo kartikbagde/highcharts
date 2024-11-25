@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarLinks - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to Highcharts</h1>
+            <p>Your trusted partner in buying and selling cars</p>
+        </header>
+        
+        <section class="chart-section">
+            <div id="chart-container"></div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 CarLinks. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

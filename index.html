@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highcharts - Data Visualizations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleindex.css') }}">
+</head>
+
+<body>
+   
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h1>Highcharts</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home2') }}">Home</a></li>
+            <li class="dropdown">
+                <button class="dropbtn">Charts</button>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('population') }}">Population Charts</a>
+                    <a href="{{ url_for('accidents') }}">Accidents per year in India Charts</a>
+                    <a href="{{ url_for('accident') }}">Accident per State Charts</a>
+                    <a href="{{ url_for('charts') }}">Advanced Charts</a>
+                </div>
+            </li>
+            <li><a href="{{ url_for('tutorials') }}">Tutorials</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+       
+        <section class="pink-section fade-in">
+            <h2>Welcome to Highcharts Hub!</h2>
+            <p>
+                Discover the power of data visualization with Highcharts. Our platform is dedicated to helping you
+                create stunning, interactive charts for your website or application. Explore our resources and start turning data into insights today!
+            </p>
+            <a href="{{ url_for('indexhighcharts') }}" class="cta-button slide-up">Get Started</a>
+        </section>
+
+        <section class="blue-section fade-in">
+            <h2>Why Highcharts?</h2>
+            <p>
+                Highcharts is a leader in the field of data visualization. Whether you're a beginner or an expert, our tools
+                make it easy to create professional-level charts that can captivate your audience. Features include:
+            </p>
+            <ul>
+                <li>Interactive and Responsive Charts</li>
+                <li>Wide Variety of Chart Types</li>
+                <li>Easy Integration with Web Technologies</li>
+                <li>Customizable Themes and Styles</li>
+            </ul>
+            
+            <a href="{{ url_for('charts') }}" class="cta-button slide-up">Explore Highcharts</a>
+        </section>
+    </div>
+     
+    <footer class="footer fade-in">
+        <p>&copy; Highcharts Designed for Data Enthusiasts</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

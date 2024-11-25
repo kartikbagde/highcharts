@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+</head>
+<body>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <!-- <p class="highcharts-description">
+            Basic line chart showing trends in a dataset. This chart includes the
+            <code>series-label</code> module, which adds a label to each line for
+            enhanced readability.
+        </p> -->
+    </figure>
+    
+    <script>
+        Highcharts.chart('container', {
+            title: {
+                text: 'India accident per year charts',
+                align: 'left'
+            },
+
+            subtitle: {
+                text: 'By Highcharts. Source: <a href="https://www.highcharts.com/demo/highcharts/line-log-axis/" target="_blank">Highcharts</a>.',
+                align: 'left'
+            },
+
+            yAxis: {
+                title: {
+                    text: 'Number of accidents'
+                }
+            },
+
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Range: 2002 to 2024'
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 2002
+                }
+            },
+
+            series: [{
+                name: 'India',
+                data: [
+                    222840, 394000, 407497, 406726,429910, 460920,
+                    470920, 523000,484704,461312, 497686,490383,461312,489400,464674,464910,470403,449002,366138,412432,461312,463000,461312
+                ]
+            }, {
+                name: 'Delhi',
+                data: [
+                    5916 , 7941, 9742, 9851, 7490, 10282,8121,6885,3726,4243,1050,3099,3473,
+                    7121,2885,3326,4243,950,2099,1473,1232,2312,999
+                ]
+            }, {
+                name: 'Maharashtra',
+                data:[
+                    11744 , 30000, 16005, 19771, 20185, 24377,12232,34222,23232,19800,20300,23000,34567,12345,54321,23412,32147, 30912, 29243, 29213, 25663, 28978, 30618
+                ]
+            }, 
+            {
+                name: 'TamilNadu',
+                data: [
+                    30912,30000,11722,12213,43232,43453,42533,23443,34233,43212,34502,
+                    23245,11164,11218,10077,12530,16585,23670,23421,34213,14954,33443,32322
+                ]
+            },
+            {
+                name: 'Karnataka',
+                data: [
+                    20912,20000,21722,22213,33232,33453,32533,33443,44233,33212,44502,
+                    33245,21164,21218,20077,22530,26585,13670,33421,24213,24954,33443,22322
+                ]
+            },
+            ],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        });
+    </script>
+</body>
+</html>

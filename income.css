@@ -1,0 +1,69 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Highcharts Figure Styling */
+.highcharts-figure {
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: center;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart Container Styling */
+#container {
+    height: 400px;
+    margin: 0 auto;
+}
+
+/* Description Styling */
+.highcharts-description {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.highcharts-description code {
+    background-color: #f0f0f0;
+    color: #d63384;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.highcharts-description a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.highcharts-description a:hover {
+    text-decoration: underline;
+}
+
+/* Styling Links and Buttons (Optional for Accessibility) */
+a:focus,
+button:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .highcharts-figure {
+        padding: 1rem;
+    }
+
+    .highcharts-description {
+        font-size: 0.85rem;
+    }
+}

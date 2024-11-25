@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='population.css') }}">
+    
+
+</head>
+<body>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+             population growth rate year vise from 2000 to 2024 
+             <br><a href="{{ url_for('explore') }}">back to main page</a>
+        </p>
+    </figure>
+    
+    <script>
+        Highcharts.chart('container', {
+            title: {
+                text: 'India population per year chart',
+                align: 'left'
+            },
+
+            // subtitle: {
+            //     text: 'By Highcharts. Source: <a href="https://www.highcharts.com/demo/highcharts/line-log-axis/" target="_blank">Highcharts</a>.',
+            //     align: 'left'
+            // },
+
+            yAxis: {
+                title: {
+                    text: 'Number of population'
+                }
+            },
+
+            xAxis: {
+                accessibility: {
+                    rangeDescription: 'Range: 2000 to 2024'
+                }
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 2000
+                }
+            },
+
+            series: [{
+                name: 'India',
+                data: [
+                    1059633675,1078970907,1098313039,1117415123,1136264583,1154638713,
+                    1172373788, 1189691809,1206734806,1223640160,1240613620,1257621191,1274487215,1291132063,1307246509,1322866505,1338636340,1354195680,1369003306,1383112050,1396387127,1407563842,1417173173,1428627663,1441719852
+                ]
+            },
+            {
+                name: 'Male',
+                data:[
+                529816837,530917837,531928415,534151230,546264583,555463871,
+                557237378, 568969180,560673480,552364016,554061362,565762119,567448721,569113206,570724650,572286650,573863634,575419568,597173306,588311205,589638712,590756384,581717317,572862766,594171985
+                ]
+            }, 
+            {
+                name: 'Female',
+                data:[
+                59633675,78970907,98313039,17415123,36264583,54638713,
+                72373788,89691809,96734806,23640160,40613620,57621191,74487215,91132063,97246509,22866505,38636340,54195680,69003306,83112050,96387127,97563842,17173173,28627663,41719852
+                ]
+            }, 
+            ],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighCharts</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <style>
+        .highcharts-figure {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        #container, #container2 {
+            width: 45%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            Pie charts are very popular for showing a compact overview of a
+            composition or comparison. While they can be harder to read than
+            column charts, they remain a popular choice for small datasets.
+        </p>
+    </figure>
+
+    <figure class="highcharts-figure">
+        <h1 style="text-align: center;">Population Chart of India</h1>
+        <div id="container2"></div>
+    </figure>
+
+    <script>
+ 
+        Population 
+        document.addEventListener('DOMContentLoaded', () => {
+            Highcharts.chart('container2', {
+                title: {
+                    text: 'Yearwise Population In India'
+                },
+                xAxis: {
+                    title: {
+                        text: 'Year'
+                    },
+                    categories: {{ valueOne | tojson }} 
+                },
+                yAxis:{
+                    type: 'logarithmic',
+                    title: {
+                        text: 'Number of Population (in millions)'
+                    }
+                },
+                series:[{
+                    name: 'Population',
+                    data: {{ value | tojson }} 
+                }]
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighCharts</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    
+</head>
+
+<body>
+    
+      <h1>accident Chart of India</h1>
+
+     <div id="container"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+                Highcharts.chart("container3", {
+                    title: { text: "Year" },
+                    xAxis: {
+                        title: {
+                            text: 'Year'
+                        },
+                        categories: {{ valueOne | tojson}}
+                        },
+                yAxis: {
+                type: 'logarithmic',
+                title: {
+                    text: 'Number of accident_per_year ',
+                    },
+                },
+                series: [{
+                    name: 'Yearwise accident_per_year In India',
+                    data: {{ value | tojson}}
+                }]
+            })
+        })
+    </script>
+</body>
+
+</html>

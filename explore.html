@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highcharts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='explore.css')}}">
+</head>
+<body>
+    <header>
+        <div class="logo">Highcharts</div>
+        <div class="search">
+            <input type="text" id="search-input" placeholder="Search for category...">
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <h1>Highcharts Hub!</h1>
+            <p>Explore the Variety of fields. Discover a wide range of categories.</p>
+        </section>
+
+        <section class="charts-listings">
+
+            <!-- population data  -->
+
+            <div class="charts-grid">
+                <h2>Population Chart</h2>
+                <a href="{{ url_for('population') }}"><img src="https://e7.pngegg.com/pngimages/676/943/png-clipart-multicolored-figure-graphic-art-world-population-population-growth-population-s-blue-child-thumbnail.png" 
+                    width="150px" height="150px" alt="population">
+                    <h3>Population Data</h3></a>
+                <ul>
+                    <li>India's population charts from 2000-2024</li>
+                    <li>Male vs Female ratio</li>
+                </ul>
+            </div>
+
+            <!-- income data -->
+
+            <div class="charts-grid">
+                <h2>Income Chart</h2>
+                <a href="{{ url_for('income') }}"><img src="https://media.istockphoto.com/id/1366762744/vector/income-growth-concept-investment-management-successful-investments.jpg?s=612x612&w=0&k=20&c=Duj93l01pV_RcQynDsDE90FrgjuLWmNnIcjdUFXy-aw=" 
+                    width="150px" height="150px" alt="income">
+                 <a href="{{ url_for('income') }}"><h3>Per Capita Income Data</h3></a>
+                <ul>
+                    <li>India's income charts from 2000-2024</li>
+                    <li>Per capita income</li>
+                </ul>
+            </div>
+
+            <!-- internet user  -->
+
+            <div class="charts-grid">
+                <h2>Internet users Chart</h2>
+                <a href="{{ url_for('tutorials') }}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ7K2lWkcHnObN7oQy7YW6iPVivcb-tNmgEQ&s" 
+                    width="150px" height="150px" alt="income">
+                    <h3>internet users Data</h3></a>
+                <ul>
+                    <li>Internet users from 2000-2024</li>
+                    <li>band vise data</li>
+                </ul>
+            </div>
+
+            <!-- accident chart  -->
+
+            <div class="charts-grid">
+                <h2>Accident Chart</h2>
+                <a href="{{ url_for('accidents') }}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ7K2lWkcHnObN7oQy7YW6iPVivcb-tNmgEQ&s" 
+                    width="150px" height="150px" alt="income">
+                    <h3>Accidents Data Of India</h3></a>
+                <ul>
+                    <li>Road Accidents occured from 2000-2024</li>
+                    <li>Train Accidents occured from 2000-2024</li>
+                    <li>Plane Accidents occured from 2000-2024</li>
+                </ul>
+            </div>
+
+            <!-- support charts  -->
+
+            <div class="charts-grid">
+                <h2>Sports Chart</h2>
+                <a href="{{ url_for('sports') }}"><img src="https://www.broadage.com/Uploads/slider-players-1-1.png" 
+                    width="150px" height="150px" alt="income">
+                    <h3>Sports Data</h3></a>
+                <ul>
+                    <li>Cricket related data</li>
+                    <li>Football related data</li>
+                    <li>Hockey related data</li>
+                    <li>Olympic related data</li>
+                </ul>
+            </div>
+
+            <!-- Bollywood data  -->
+
+            <div class="charts-grid">
+                <h2>Bollywood top Listings</h2>
+                <a href="{{ url_for('movie') }}"><img src="https://plus.unsplash.com/premium_photo-1710961232986-36cead00da3c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bW92aWV8ZW58MHx8MHx8fDA%3D" 
+                    width="150px" height="150px" alt="income">
+                    <h3>Movies Data</h3></a>
+                <ul>
+                    <li>Most watched in the decade</li>
+                    <li>Most expensive </li>
+                    <li>Genre </li>
+                    <!-- <li>Olympic related data</li> -->
+                </ul>
+            </div>
+
+            <!-- health index  -->
+
+            <div class="charts-grid">
+                <h2>Health Index</h2>
+                <a href="{{ url_for('health') }}"><img src="https://static.vecteezy.com/system/resources/thumbnails/000/353/829/small_2x/Health__2881_29.jpg" 
+                    width="150px" height="150px" alt="income">
+                    <!-- <a href="{{ url_for('health') }}"> -->
+                        <h3>Health Data</h3></a>
+                <ul>
+                    <li>most common disease</li>
+                    <li>Active cases in India </li>
+                    <li>Cancer Related data</li>
+                    <!-- <li>Olympic related data</li> -->
+                </ul>
+            </div>
+
+            <!-- Transport data  -->
+
+            <div class="charts-grid">
+                <h2>Transport mode Index</h2>
+                <a href="{{ url_for('transport') }}"><img src="https://e7.pngegg.com/pngimages/39/211/png-clipart-vehicle-rail-transport-cargo-logistics-freight-transport-logistic-service-people-thumbnail.png" 
+                    width="150px" height="150px" alt="income">
+                    <h3>Transport Data</h3></a>
+                <ul>
+                    <li>most common mode of Transport</li>
+                    <li>Number of mode of Transport </li>
+                    <li>Most cheaper mode of Transport</li>
+                    <!-- <li>Olympic related data</li> -->
+                </ul>
+            </div>
+        </section>
+        
+        
+    </main>
+    <script>
+        document.getElementById('search-button').addEventListener('click', function () {
+            const query = document.getElementById('search-input').value.toLowerCase();
+    
+            if (!query.trim()) {
+                alert('Please enter a search term.');
+                return;
+            }
+    
+            const charts = document.querySelectorAll('.charts-grid');
+    
+            let matchFound = false;
+    
+            charts.forEach(chart => {
+                const title = chart.querySelector('h2').textContent.toLowerCase();
+                const description = chart.querySelector('ul').textContent.toLowerCase();
+    
+                if (title.includes(query) || description.includes(query)) {
+                    chart.style.display = 'block'; // Show matching charts
+                    matchFound = true;
+                } else {
+                    chart.style.display = 'none'; // Hide non-matching charts
+                }
+            });
+    
+            if (!matchFound) {
+                alert('No matching charts found.');
+            }
+        });
+    </script>
+    
+
+    
+</body>
+</html>
